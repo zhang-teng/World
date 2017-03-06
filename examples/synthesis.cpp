@@ -144,7 +144,7 @@ int main(int argc, char *argv[])
 
     // Define a default filled structures
     WorldParameters world_parameters;
-    world_parameters.fs = 22050; // FIXME: hardcoded value
+    world_parameters.fs = 16000; // FIXME: hardcoded value
     world_parameters.f0_length = filesize(argv[1]) / sizeof(double);
     world_parameters.fft_size = ((filesize(argv[2]) / (sizeof(double) * world_parameters.f0_length)) - 1) * 2; // Be careful that .sp contains only first half of the spectrum
     std::cout << "fft size = " << world_parameters.fft_size << std::endl;
